@@ -1,7 +1,7 @@
 header {
   height: 100vh;
   padding-top: 7rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .header__container {
@@ -43,12 +43,12 @@ header {
 .me {
   background: linear-gradient(var(--color-primary), transparent);
   width: 22rem;
-  height: 30rem;
+  height: 24rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 4rem;
-  border-radius: 12rem 12rem 0 0;
+  margin-top: 2rem;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   overflow: hidden;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
 }
@@ -68,7 +68,7 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
-    height: 68vh;
+    height: 100vh;
   }
 }
 
@@ -77,6 +77,8 @@ header {
 @media screen and (max-width: 600px) {
   header {
     height: 100vh;
+    margin-top: 0rem;
+    padding: 3rem;
   }
 
   .header__socials,
