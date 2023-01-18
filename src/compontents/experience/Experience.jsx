@@ -47,6 +47,14 @@ const Experience = () => {
               <BsPatchCheckFill />
               <h4>NPM</h4>
             </article>
+            <article className="experience__details">
+              <BsPatchCheckFill />
+              <h4>GitHub</h4>
+            </article>
+            <article className="experience__details">
+              <BsPatchCheckFill />
+              <h4>Git</h4>
+            </article>
           </div>
         </div>
         <div className="experience__card">
