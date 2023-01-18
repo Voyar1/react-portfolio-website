@@ -60,8 +60,7 @@ h1 {
 }
 
 section {
-  margin-top: 6rem;
-  height: 100vh;
+  margin-top: 4rem;
   padding-top: 2rem;
 }
 
@@ -137,5 +136,20 @@ img {
 
   .section > h2 {
     margin-bottom: 2rem;
+  }
+}
+
+/* ==================ANIMATIONS=================== */
+
+.apear {
+  animation: apear 2s;
+}
+
+@keyframes apear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

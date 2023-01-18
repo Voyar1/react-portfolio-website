@@ -5,7 +5,7 @@ import myPhoto from "../../assets/my-portfolio-photo.jpg";
 import HeaderSocials from "./HeaderSocials";
 const Header = () => {
   return (
-    <header id="header">
+    <header id="header" className="apear">
       <div className="container header__container">
         <span>Hello I'm</span>
         <h1>Arkadiusz Wojciechowski</h1>

@@ -81,6 +81,11 @@ header {
     padding: 3rem;
   }
 
+  .me {
+    width: 15rem;
+    height: 17rem;
+  }
+
   .header__socials,
   .scroll {
     display: none;
