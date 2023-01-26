@@ -111,6 +111,12 @@ header {
   }
 }
 
+@media (orientation: landscape) {
+  header {
+    height: 700px;
+  }
+}
+
 /* ===========WAVE ANIMATION============= */
 
 .wave {
