@@ -43,7 +43,7 @@ const Nav = () => {
         href="#projects"
         onClick={activeHandler}
         data-key="#projects"
-        className={activeNav === "#services" ? "active" : ""}
+        className={activeNav === "#projects" ? "active" : ""}
       >
         <FiAirplay />
       </a>
