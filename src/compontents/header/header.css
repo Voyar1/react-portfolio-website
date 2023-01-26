@@ -89,10 +89,24 @@ header {
   .me {
     width: 15rem;
     height: 17rem;
+    margin-top: 0;
   }
 
-  .header__socials,
   .scroll {
+    display: none;
+  }
+
+  .header__socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    position: static;
+    margin: 1.2rem;
+  }
+
+  .header__socials::after {
     display: none;
   }
 }

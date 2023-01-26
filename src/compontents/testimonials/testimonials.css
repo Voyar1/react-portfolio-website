@@ -1,5 +1,6 @@
 .container.testimonials__container {
-  width: 40%;
+  width: 45%;
+  padding-bottom: 3rem;
 }
 
 .client__avatar {
@@ -21,6 +22,7 @@
   padding: 2rem;
   border-radius: 2rem;
   user-select: none;
+  min-height: 310px;
 }
 
 .client__review {
@@ -29,6 +31,10 @@
   display: block;
   width: 80%;
   margin: 0.8rem auto 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: var(--color-primary-variant);
 }
 
 /* ===============MEDIA QUERIES (MEDIUMS DEVICES)================== */
