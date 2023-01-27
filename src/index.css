@@ -62,6 +62,8 @@ h1 {
 section {
   margin-top: 4rem;
   padding-top: 2rem;
+  opacity: 0;
+  transition: 1.5s ease-in-out;
 }
 
 section > h2,
@@ -143,6 +145,10 @@ img {
 
 .apear {
   animation: apear 2s;
+}
+
+.apear-section {
+  opacity: 1;
 }
 
 @keyframes apear {

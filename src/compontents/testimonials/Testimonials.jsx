@@ -1,6 +1,8 @@
 import React from "react";
 import "./testimonials.css";
 import DOGGY from "../../assets/my-portfolio-dog-profile.jpg";
+import { useRef } from "react";
+import useIntersection from "../../hooks/useIntersection";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -33,8 +35,15 @@ const TESTIMONIAL_DATA = [
 ];
 
 const Testimonials = () => {
+  const ref = useRef();
+  const inViewport = useIntersection(ref, "-300px");
+
   return (
-    <section id="testimonials">
+    <section
+      id="testimonials"
+      ref={ref}
+      className={`${inViewport ? "apear-section" : ""}`}
+    >
       <span>Review from coworkers</span>
       <h2>Testimonials</h2>
       <Swiper

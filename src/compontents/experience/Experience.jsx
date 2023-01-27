@@ -1,10 +1,18 @@
 import React from "react";
 import "./experience.css";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { useRef } from "react";
+import useIntersection from "../../hooks/useIntersection";
 
 const Experience = () => {
+  const ref = useRef();
+  const inViewport = useIntersection(ref, "-300px");
   return (
-    <section id="experience">
+    <section
+      id="experience"
+      ref={ref}
+      className={`${inViewport ? "apear-section" : ""}`}
+    >
       <span>What Skills i Have</span>
       <h2>My experience</h2>
       <div className="container experience__container">

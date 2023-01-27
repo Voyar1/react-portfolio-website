@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./about.css";
 import DOG from "../../assets/my-portfolio-dog.jpg";
 import { FaAward } from "react-icons/fa";
+import useIntersection from "../../hooks/useIntersection";
 const About = () => {
+  const ref = useRef();
+  const inViewport = useIntersection(ref, "-300px");
+
   return (
-    <section id="about">
+    <section
+      id="about"
+      ref={ref}
+      className={`${inViewport ? "apear-section" : ""}`}
+    >
       <span>Get To Know</span>
       <h2>About me</h2>
       <div className="container about__container">
