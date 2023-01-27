@@ -2,7 +2,6 @@ import React from "react";
 import "./about.css";
 import DOG from "../../assets/my-portfolio-dog.jpg";
 import { FaAward } from "react-icons/fa";
-
 const About = () => {
   return (
     <section id="about">
