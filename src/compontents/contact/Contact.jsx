@@ -3,14 +3,13 @@ import "./contact.css";
 import { HiOutlineMail } from "react-icons/hi";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import useIntersection from "../../hooks/useIntersection";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const [submitSuceed, setSubmitSuceed] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const form = useRef();
-  const ref = useRef();
-  const inViewport = useIntersection(ref, "-300px");
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -41,7 +40,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={ref}
-      className={`${inViewport ? "apear-section" : ""}`}
+      className={`${inView ? "apear-section" : ""}`}
     >
       <span>Get In Touch</span>
       <h2>Contact me</h2>

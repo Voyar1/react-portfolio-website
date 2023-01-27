@@ -1,8 +1,7 @@
 import React from "react";
 import "./projects.css";
 import portoflioItem1 from "../../assets/portfolio-item1.jpg";
-import { useRef } from "react";
-import useIntersection from "../../hooks/useIntersection";
+import { useInView } from "react-intersection-observer";
 const data = [
   {
     id: 1,
@@ -21,13 +20,12 @@ const data = [
 ];
 
 const Projects = () => {
-  const ref = useRef();
-  const inViewport = useIntersection(ref, "-300px");
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <section
       id="projects"
       ref={ref}
-      className={`${inViewport ? "apear-section" : ""}`}
+      className={`${inView ? "apear-section" : ""}`}
     >
       <span>My Recent Work</span>
       <h2>Portfolio</h2>
