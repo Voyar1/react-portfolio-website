@@ -15,6 +15,7 @@ footer {
 footer a {
   color: var(--color-bg);
   font-size: 1rem;
+  cursor: pointer;
 }
 
 footer span {

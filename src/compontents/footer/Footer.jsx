@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+import Link from "react-scroll/modules/components/Link";
 
 const Footer = () => {
   return (
@@ -8,19 +9,41 @@ const Footer = () => {
       <span>VOYAR</span>
       <ul className="permalinks">
         <li>
-          <a href="#header">Home</a>
+          <Link to="header" spy={true} offset={0} smooth={true} duration={0}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link to="about" spy={true} offset={0} smooth={true} duration={0}>
+            About
+          </Link>
         </li>
         <li>
-          <a href="#experience">Experience</a>
+          <Link
+            to="experience"
+            spy={true}
+            offset={0}
+            smooth={true}
+            duration={0}
+          >
+            Experience
+          </Link>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <Link to="projects" spy={true} offset={0} smooth={true} duration={0}>
+            Projects
+          </Link>
         </li>
         <li>
-          <a href="#testimonials">Passion</a>
+          <Link
+            to="testimonials"
+            spy={true}
+            offset={0}
+            smooth={true}
+            duration={0}
+          >
+            Testimonials
+          </Link>
         </li>
       </ul>
       <div className="footer__socials">

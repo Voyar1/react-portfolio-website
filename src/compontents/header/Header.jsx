@@ -3,6 +3,7 @@ import CTA from "./CTA";
 import "./header.css";
 import myPhoto from "../../assets/my-portfolio-photo.jpg";
 import HeaderSocials from "./HeaderSocials";
+import Link from "react-scroll/modules/components/Link";
 const Header = () => {
   return (
     <header id="header" className="apear">
@@ -17,9 +18,9 @@ const Header = () => {
           <div className="wave"></div>
           <div className="wave"></div>
         </div>
-        <a href="#contact" className="scroll">
+        <Link to="contact" className="scroll">
           Scroll down
-        </a>
+        </Link>
       </div>
     </header>
   );

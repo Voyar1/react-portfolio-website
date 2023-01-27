@@ -1,60 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import "./nav.css";
 import { BiHomeAlt, BiMessageDetail } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsBook } from "react-icons/bs";
 import { FiAirplay } from "react-icons/fi";
+import { Link } from "react-scroll";
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState("#header");
-
-  const activeHandler = (event) => {
-    const id = event.currentTarget.dataset.key;
-    setActiveNav(id);
-  };
-
   return (
     <nav>
-      <a
-        href="#header"
-        className={activeNav === "#header" ? "active" : ""}
-        onClick={activeHandler}
-        data-key="#header"
-      >
+      <Link to="header" spy={true} offset={0} smooth={true} duration={0}>
         <BiHomeAlt />
-      </a>
-      <a
-        href="#about"
-        onClick={activeHandler}
-        data-key="#about"
-        className={activeNav === "#about" ? "active" : ""}
-      >
+      </Link>
+      <Link to="about" spy={true} smooth={true} offset={-60} duration={0}>
         <AiOutlineUser />
-      </a>
-      <a
-        href="#experience"
-        onClick={activeHandler}
-        data-key="#experience"
-        className={activeNav === "#experience" ? "active" : ""}
-      >
+      </Link>
+      <Link to="experience" spy={true} smooth={true} offset={-80} duration={0}>
         <BsBook />
-      </a>
-      <a
-        href="#projects"
-        onClick={activeHandler}
-        data-key="#projects"
-        className={activeNav === "#projects" ? "active" : ""}
-      >
+      </Link>
+      <Link to="projects" spy={true} smooth={true} offset={-80} duration={0}>
         <FiAirplay />
-      </a>
-      <a
-        href="#contact"
-        onClick={activeHandler}
-        data-key="#contact"
-        className={activeNav === "#contact" ? "active" : ""}
-      >
+      </Link>
+      <Link to="contact" spy={true} smooth={true} offset={-160} duration={0}>
         <BiMessageDetail />
-      </a>
+      </Link>
     </nav>
   );
 };
