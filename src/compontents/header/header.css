@@ -78,6 +78,14 @@ header {
   }
 }
 
+/* ===============MEDIA QUERIES (Vertical desktop)================== */
+
+@media (min-width: 900px) and (orientation: portrait) {
+  header {
+    height: 50rem;
+  }
+}
+
 /* ===============MEDIA QUERIES (MEDIUMS DEVICES)================== */
 
 @media screen and (max-width: 600px) {
