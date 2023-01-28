@@ -64,6 +64,19 @@
   }
   .experience__card {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
+  }
+
+  .experience__details {
+    font-size: 1rem;
+  }
+}
+
+/* ===============MEDIA QUERIES (Very small DEVICES)================== */
+
+@media screen and (max-width: 300px) {
+  .experience__content {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

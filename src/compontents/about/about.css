@@ -113,3 +113,10 @@
     margin-top: 2rem;
   }
 }
+
+@media screen and (max-width: 300px) {
+  .about__cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

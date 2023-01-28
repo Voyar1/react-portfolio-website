@@ -166,3 +166,9 @@ header {
 .endWave {
   display: none;
 }
+
+@media screen and (max-width: 300px) {
+  .header__container > h1 {
+    font-size: 1rem;
+  }
+}
