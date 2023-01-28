@@ -12,7 +12,7 @@ const Nav = () => {
       <Link to="header" spy={true} offset={0} smooth={true} duration={0}>
         <BiHomeAlt />
       </Link>
-      <Link to="about" spy={true} smooth={true} offset={-60} duration={0}>
+      <Link to="about" spy={true} smooth={true} offset={-20} duration={0}>
         <AiOutlineUser />
       </Link>
       <Link to="experience" spy={true} smooth={true} offset={-80} duration={0}>
