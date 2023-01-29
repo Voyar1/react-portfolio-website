@@ -20,7 +20,7 @@
   aspect-ratio: 1/1;
   border-radius: 2rem;
   overflow: hidden;
-  transform: rotate(13deg);
+  transform: rotate(12deg);
   transition: var(--transition);
 }
 

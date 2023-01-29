@@ -3,7 +3,7 @@ import "./nav.css";
 import { BiHomeAlt, BiMessageDetail } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsBook } from "react-icons/bs";
-import { FiAirplay } from "react-icons/fi";
+import { VscProject } from "react-icons/vsc";
 import { Link } from "react-scroll";
 
 const Nav = () => {
@@ -19,7 +19,7 @@ const Nav = () => {
         <BsBook />
       </Link>
       <Link to="projects" spy={true} smooth={true} offset={-80} duration={0}>
-        <FiAirplay />
+        <VscProject />
       </Link>
       <Link to="contact" spy={true} smooth={true} offset={-160} duration={0}>
         <BiMessageDetail />

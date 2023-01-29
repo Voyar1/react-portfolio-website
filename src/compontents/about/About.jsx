@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import DOG from "../../assets/my-portfolio-dog.jpg";
+import sky from "../../assets/sky.jpg";
 import { FaAward } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 const About = () => {
@@ -17,32 +17,33 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={DOG} alt="me" />
+            <img src={sky} alt="me" />
           </div>
         </div>
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
               <FaAward className="about__icon" />
-              <h5>Experience</h5>
-              <small>3+ Years of working</small>
+              <h5>Commercial experience</h5>
+              <small>1+ year working with SEO</small>
             </article>
             <article className="about__card">
               <FaAward className="about__icon" />
-              <h5>Projects</h5>
-              <small>3+ Years of working</small>
+              <h5>Workflow</h5>
+              <small>Focused on customer needs</small>
             </article>
             <article className="about__card">
               <FaAward className="about__icon" />
-              <h5>Passion</h5>
-              <small>My passion is</small>
+              <h5>Self development</h5>
+              <small>Highly motivated to learn new tech</small>
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
-            suscipit iste molestias quos saepe eaque hic mollitia, delectus unde
-            nobis vero aliquam quaerat dolorum excepturi neque in quam
-            voluptates exercitationem!
+            I am currently expanding my skills in web development and SEO.
+            During my work, I try to look for innovative solutions that, when
+            implemented, will achieve satisfactory results. In addition to the
+            IT and E-commerce aspects, my greatest passion is sports - I believe
+            that for a fully fit mind we also need a fit and healthy body 🏋️
           </p>
           <a href="#contact" className="btn btn-primary">
             Lets contact!
