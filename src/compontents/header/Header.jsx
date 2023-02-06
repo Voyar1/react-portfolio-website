@@ -1,7 +1,7 @@
 import React from "react";
 import CTA from "./CTA";
 import "./header.css";
-import myPhoto from "../../assets/my-portfolio-photo.jpg";
+import myPhoto from "../../assets/my-portfolio-photo.webp";
 import HeaderSocials from "./HeaderSocials";
 import Link from "react-scroll/modules/components/Link";
 const Header = () => {
