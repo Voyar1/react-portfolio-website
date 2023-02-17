@@ -55,8 +55,10 @@ header {
 
 .me img {
   position: absolute;
+  left: 0;
   z-index: 10;
-  opacity: 0.95;
+  opacity: 0.9;
+  /* filter: grayscale(0.1); */
 }
 /* ===========SCROLL============== */
 
