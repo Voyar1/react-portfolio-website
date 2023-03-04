@@ -20,13 +20,27 @@
 .portfolio__item-image {
   border-radius: 1.5rem;
   overflow: hidden;
+  /* height: 25rem; */
 }
 
-.portfolio__item span {
+.portfolio__item-image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.portfolio__project-title {
   display: block;
-  margin: 1.2rem 0 1rem;
+  margin: 1.2rem 0 0rem;
   font-size: 1.3rem;
   color: var(--color-white);
+}
+
+.portfolio__project-stack {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--color-light);
 }
 
 .portfolio__item .cta {

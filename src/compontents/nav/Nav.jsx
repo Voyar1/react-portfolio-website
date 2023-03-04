@@ -15,13 +15,13 @@ const Nav = () => {
       <Link to="about" spy={true} smooth={true} offset={-20} duration={0}>
         <AiOutlineUser />
       </Link>
-      <Link to="experience" spy={true} smooth={true} offset={-80} duration={0}>
+      <Link to="experience" spy={true} smooth={true} offset={-60} duration={0}>
         <BsBook />
       </Link>
-      <Link to="projects" spy={true} smooth={true} offset={-80} duration={0}>
+      <Link to="projects" spy={true} smooth={true} offset={-70} duration={0}>
         <VscProject />
       </Link>
-      <Link to="contact" spy={true} smooth={true} offset={-160} duration={0}>
+      <Link to="contact" spy={true} smooth={true} offset={-100} duration={0}>
         <BiMessageDetail />
       </Link>
     </nav>

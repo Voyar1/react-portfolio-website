@@ -50,8 +50,12 @@ const Contact = () => {
           <article className="contact-option">
             <HiOutlineMail className="contact-option__icon" />
             <span>Email</span>
-            <span className="contact-option__email">areq12x@gmail.com</span>
-            <a href="mailto:areq12x@gmail.com">Send a message!</a>
+            <span className="contact-option__email">
+              arkadiusz.r.wojciechowski@gmail.com
+            </span>
+            <a href="mailto:arkadiusz.r.wojciechowski@gmail.com">
+              Send a message!
+            </a>
           </article>
         </div>
 

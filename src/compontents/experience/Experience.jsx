@@ -86,6 +86,10 @@ const Experience = () => {
               <BsPatchCheckFill />
               <h4>Firebase</h4>
             </article>
+            <article className="experience__details">
+              <BsPatchCheckFill />
+              <h4>GraphQL</h4>
+            </article>
           </div>
         </div>
       </div>
