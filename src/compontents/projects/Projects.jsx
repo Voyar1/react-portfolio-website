@@ -17,7 +17,7 @@ const data = [
     id: 2,
     img: portfolioWebsitePhoto,
     title: "Personal portfolio website",
-    stack: "React, email.js, CSS",
+    stack: "React, email.js, CSS, react-scroll",
     github: "https://github.com/Voyar1/react-portfolio-website",
     demo: "#",
   },
