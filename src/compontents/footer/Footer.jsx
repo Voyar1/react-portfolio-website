@@ -34,7 +34,7 @@ const Footer = () => {
             Projects
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="testimonials"
             spy={true}
@@ -44,7 +44,7 @@ const Footer = () => {
           >
             Testimonials
           </Link>
-        </li>
+        </li> */}
       </ul>
       <div className="footer__socials">
         <a href="https://github.com/Voyar1">
