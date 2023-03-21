@@ -60,10 +60,9 @@ h1 {
 }
 
 section {
-  margin-top: 4rem;
-  padding-top: 2rem;
   opacity: 0;
   transition: 1.5s ease-in-out;
+  margin-bottom: 1rem;
 }
 
 section > span {

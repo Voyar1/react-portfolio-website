@@ -1,3 +1,7 @@
+#about {
+  min-height: 100vh;
+}
+
 .about__container {
   display: grid;
   grid-template-columns: 35% 55%;
