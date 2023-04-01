@@ -113,6 +113,14 @@ a:hover {
   color: var(--color-bg);
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 img {
   display: block;
   width: 100%;
