@@ -1,5 +1,6 @@
 #about {
   min-height: 100vh;
+  padding-top: 8rem;
 }
 
 .about__container {
@@ -95,6 +96,10 @@
 /* ===============MEDIA QUERIES (MEDIUMS DEVICES)================== */
 
 @media screen and (max-width: 600px) {
+  #about {
+    padding-top: 4rem;
+  }
+
   .about__me {
     width: 65%;
     margin: 0 auto 3rem;
@@ -111,10 +116,6 @@
 
   .about__content p {
     margin: 1.5rem 0;
-  }
-
-  #about {
-    margin-top: 2rem;
   }
 }
 

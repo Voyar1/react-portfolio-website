@@ -62,7 +62,8 @@ h1 {
 section {
   opacity: 0;
   transition: 1.5s ease-in-out;
-  margin-bottom: 6rem;
+  padding-bottom: 10rem;
+  padding-top: 1rem;
 }
 
 section > span {
