@@ -2,7 +2,7 @@ import React from "react";
 import "./projects.css";
 import portfolioWebsitePhoto from "../../assets/my-portfolio-snapshot.png";
 import hynextSnapshotPhoto from "../../assets/hynext-snapshot.png";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 const data = [
   {
     id: 1,
@@ -24,46 +24,58 @@ const data = [
 ];
 
 const Projects = () => {
-  const { ref, inView } = useInView({ triggerOnce: true });
   return (
-    <section
-      id="projects"
-      ref={ref}
-      className={`${inView ? "apear-section" : ""}`}
-    >
-      <span>My Recent Work</span>
-      <h2>Portfolio</h2>
-      <div className="container portfolio__container">
-        {data.map((project) => {
-          return (
-            <article className="portfolio__item" key={project.id}>
-              <div className="portfolio__item-image">
-                <img src={project.img} alt="project1" />
-              </div>
-              <span className="portfolio__project-title">{project.title}</span>
-              <span className="portfolio__project-stack">{project.stack}</span>
-              <div className="cta">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={project.demo}
-                  target={project.targetBlank ? "_blank" : ""}
-                  className="btn btn-primary"
-                  rel="noreferrer"
-                >
-                  Live demo
-                </a>
-              </div>
-            </article>
-          );
-        })}
-      </div>
+    <section id="projects">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+          },
+        }}
+      >
+        <span>My Recent Work</span>
+        <h2>Portfolio</h2>
+        <div className="container portfolio__container">
+          {data.map((project) => {
+            return (
+              <article className="portfolio__item" key={project.id}>
+                <div className="portfolio__item-image">
+                  <img src={project.img} alt="project1" />
+                </div>
+                <span className="portfolio__project-title">
+                  {project.title}
+                </span>
+                <span className="portfolio__project-stack">
+                  {project.stack}
+                </span>
+                <div className="cta">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href={project.demo}
+                    target={project.targetBlank ? "_blank" : ""}
+                    className="btn btn-primary"
+                    rel="noreferrer"
+                  >
+                    Live demo
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </motion.div>
     </section>
   );
 };

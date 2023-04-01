@@ -3,13 +3,12 @@ import "./contact.css";
 import { HiOutlineMail } from "react-icons/hi";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [submitSuceed, setSubmitSuceed] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const form = useRef();
-  const { ref, inView } = useInView({ triggerOnce: true });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,56 +36,72 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      ref={ref}
-      className={`${inView ? "apear-section" : ""}`}
-    >
-      <span>Get In Touch</span>
-      <h2>Contact me</h2>
+    <section id="contact">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+          },
+        }}
+      >
+        <span>Get In Touch</span>
+        <h2>Contact me</h2>
 
-      <div className="container container__contact">
-        <div className="contact__options">
-          <article className="contact-option">
-            <HiOutlineMail className="contact-option__icon" />
-            <span>Email</span>
-            <span className="contact-option__email">
-              arkadiusz.r.wojciechowski@gmail.com
-            </span>
-            <a href="mailto:arkadiusz.r.wojciechowski@gmail.com">
-              Send a message!
-            </a>
-          </article>
+        <div className="container container__contact">
+          <div className="contact__options">
+            <article className="contact-option">
+              <HiOutlineMail className="contact-option__icon" />
+              <span>Email</span>
+              <span className="contact-option__email">
+                arkadiusz.r.wojciechowski@gmail.com
+              </span>
+              <a href="mailto:arkadiusz.r.wojciechowski@gmail.com">
+                Send a message!
+              </a>
+            </article>
+          </div>
+
+          <form ref={form} onSubmit={sendEmail}>
+            {submitSuceed && (
+              <p className="submit-succes-message">
+                Thank you for your message!
+              </p>
+            )}
+            {submitError && (
+              <p className="submit-succes-message">
+                Something went wrong, try again later or choose another contact
+                method
+              </p>
+            )}
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="7"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" className="btn btn-primary">
+              Send Message
+            </button>
+          </form>
         </div>
-
-        <form ref={form} onSubmit={sendEmail}>
-          {submitSuceed && (
-            <p className="submit-succes-message">Thank you for your message!</p>
-          )}
-          {submitError && (
-            <p className="submit-succes-message">
-              Something went wrong, try again later or choose another contact
-              method
-            </p>
-          )}
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            required
-          />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            rows="7"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
-        </form>
-      </div>
+      </motion.div>
     </section>
   );
 };
