@@ -62,7 +62,7 @@ h1 {
 section {
   opacity: 0;
   transition: 1.5s ease-in-out;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
 }
 
 section > span {
@@ -123,10 +123,6 @@ img {
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
-  }
-
-  section {
-    margin-top: 6rem;
   }
 }
 

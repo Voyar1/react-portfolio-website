@@ -64,7 +64,7 @@
 
 /* ===============MEDIA QUERIES (MEDIUMS DEVICES)================== */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 920px) {
   .portfolio__container {
     grid-template-columns: 1fr;
     padding: 0;
