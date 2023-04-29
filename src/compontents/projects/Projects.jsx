@@ -2,6 +2,8 @@ import React from "react";
 import "./projects.css";
 import portfolioWebsitePhoto from "../../assets/my-portfolio-snapshot.png";
 import hynextSnapshotPhoto from "../../assets/hynext-snapshot.png";
+import ecommerceNext from "../../assets/voyar-gym.png";
+import typeScriptProject from "../../assets/website-typescript-project.png";
 import { motion } from "framer-motion";
 const data = [
   {
@@ -15,11 +17,28 @@ const data = [
   },
   {
     id: 2,
+    img: ecommerceNext,
+    title: "Voyar - Next.js Ecommerce ",
+    stack:
+      "Next.js, React, Redux, redux-toolkit, formik, CSS modules, Strapi, Stripe",
+    github: "https://github.com/Voyar1/Voyar-Next.js-Ecommerce",
+    demo: "https://voyar-next-js-ecommerce-demo.vercel.app/",
+  },
+  {
+    id: 3,
     img: portfolioWebsitePhoto,
     title: "Personal portfolio website",
     stack: "React, email.js, CSS, react-scroll",
     github: "https://github.com/Voyar1/react-portfolio-website",
     demo: "#",
+  },
+  {
+    id: 4,
+    img: typeScriptProject,
+    title: "TypeScript - React app",
+    stack: "TypeScript, React, Vite, Tailwind,Hero Icons, Framer Motion",
+    github: "https://github.com/Voyar1/Gym-Website-with-TypeScript",
+    demo: "https://gym-website-with-typescript.pages.dev/",
   },
 ];
 
